@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using SoloCapstone.Models;
 
 namespace SoloCapstone.Controllers
@@ -50,6 +51,10 @@ namespace SoloCapstone.Controllers
         {
             if (ModelState.IsValid)
             {
+                //tie employee to user table
+                string userId = User.Identity.GetUserId();
+                employee.ApplicationId = userId;
+
                 db.Employees.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");

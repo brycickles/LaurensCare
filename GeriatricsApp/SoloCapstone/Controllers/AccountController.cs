@@ -168,7 +168,18 @@ namespace SoloCapstone.Controllers
                     //Assign Role to user Here       
                     await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
                     //Ends Here     
-                    return RedirectToAction("Index", "Users");
+
+                    if (model.UserRoles == "Customer")
+                    {
+                        return RedirectToAction("Create", "Customers");
+                    } else if (model.UserRoles == "Lauren")
+                    {
+                        return RedirectToAction("Index", "Employees");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Create", "Employees");
+                    }
                 }
                 ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
                                           .ToList(), "Name", "Name");

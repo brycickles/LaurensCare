@@ -53,12 +53,6 @@
         <th>
             @Html.DisplayNameFor(model => model.RZipCode)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ConsultMessage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HasBeenConsulted)
-        </th>
         <th></th>
     </tr>
 
@@ -105,12 +99,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.RZipCode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ConsultMessage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HasBeenConsulted)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.CustomerId }) |

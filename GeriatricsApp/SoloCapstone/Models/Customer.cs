@@ -49,12 +49,11 @@ namespace SoloCapstone.Models
         //properties for initial consultation 
         public string ConsultMessage { get; set; }
         public bool HasBeenConsulted { get; set; }
-        
 
-        ////key tied to applicationUser Identity to assign appID 
-        //[ForeignKey("ApplicationUser")]
-        //public string ApplicationId { get; set; }
-        //public ApplicationException ApplicationUser { get; set; }
+
+        [ForeignKey("ApplicationUser")]
+        public string ApplicationId { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
 
     }
 

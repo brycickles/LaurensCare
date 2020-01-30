@@ -178,9 +178,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001291922496_FirstMigration.cs" />
-    <Compile Include="Migrations\202001291922496_FirstMigration.Designer.cs">
-      <DependentUpon>202001291922496_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202001301650489_ChangedModelValuesToIncludeApplicationId.cs" />
+    <Compile Include="Migrations\202001301650489_ChangedModelValuesToIncludeApplicationId.Designer.cs">
+      <DependentUpon>202001301650489_ChangedModelValuesToIncludeApplicationId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -284,8 +284,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202001291922496_FirstMigration.resx">
-      <DependentUpon>202001291922496_FirstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202001301650489_ChangedModelValuesToIncludeApplicationId.resx">
+      <DependentUpon>202001301650489_ChangedModelValuesToIncludeApplicationId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using SoloCapstone.Models;
 
 namespace SoloCapstone.Controllers
@@ -50,6 +51,10 @@ namespace SoloCapstone.Controllers
         {
             if (ModelState.IsValid)
             {
+                //tie to application user table
+                string userId = User.Identity.GetUserId();
+                customer.ApplicationId = userId;
+
                 db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -81,8 +86,7 @@ namespace SoloCapstone.Controllers
         public ActionResult Edit([Bind(Include = "CustomerId,CFirstName,CLastName,CEmail,CPhoneNumber,CCity,CStreet,CState,CZipCode,RFirsName,RLastName,RCity,RStreet,RState,RZipCode,ConsultMessage,HasBeenConsulted")] Customer customer)
         {
             if (ModelState.IsValid)
-            {
-                db.Entry(customer).State = EntityState.Modified;
+            {   db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
