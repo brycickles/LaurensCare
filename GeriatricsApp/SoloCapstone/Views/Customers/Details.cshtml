@@ -1,0 +1,146 @@
+﻿@model SoloCapstone.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CZipCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RFirsName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RFirsName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RZipCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConsultMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConsultMessage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasBeenConsulted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasBeenConsulted)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

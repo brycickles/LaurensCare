@@ -1,0 +1,123 @@
+﻿@model IEnumerable<SoloCapstone.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CZipCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RFirsName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RZipCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConsultMessage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasBeenConsulted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CZipCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RFirsName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RZipCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConsultMessage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HasBeenConsulted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustomerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerId })
+        </td>
+    </tr>
+}
+
+</table>
