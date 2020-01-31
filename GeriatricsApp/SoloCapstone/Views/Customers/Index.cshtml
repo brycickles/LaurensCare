@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SoloCapstone.Models.Customer>
+﻿@model SoloCapstone.Models.Customer
 
 @{
     ViewBag.Title = "Index";
@@ -6,9 +6,7 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -56,56 +54,56 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.CFirstName)
+            @Html.Display(Model.CFirstName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CLastName)
+            @Html.Display(Model.CLastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CEmail)
+            @Html.Display(Model.CEmail)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CPhoneNumber)
+            @Html.Display(Model.CPhoneNumber)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CCity)
+            @Html.Display(Model.CCity)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CStreet)
+            @Html.Display(Model.CStreet)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CState)
+            @Html.Display(Model.CState)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CZipCode)
+            @Html.Display(Model.CZipCode)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RFirsName)
+            @Html.Display(Model.RFirsName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RLastName)
+            @Html.Display(Model.RLastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RCity)
+            @Html.Display(Model.RCity)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RStreet)
+            @Html.Display(Model.RStreet)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RState)
+            @Html.Display(Model.RState)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RZipCode)
+            @Html.Display(Model.RZipCode)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CustomerId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerId })
+            @Html.ActionLink("Edit", "Edit", new { Model.CustomerId }) |
+            @Html.ActionLink("Details", "Details", new { Model.CustomerId }) |
+            @Html.ActionLink("Delete", "Delete", new { Model.CustomerId })
         </td>
     </tr>
-}
+
 
 </table>
