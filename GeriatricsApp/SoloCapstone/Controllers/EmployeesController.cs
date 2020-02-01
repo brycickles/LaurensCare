@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
@@ -15,10 +17,21 @@ namespace SoloCapstone.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Employees
-        public ActionResult Index()
+        public JsonResult GetEvents()
         {
-            return View(db.Employees.ToList());
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                var events = db.Events.ToList();
+                return new JsonResult { Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            }
+        }
+        // GET: Employees
+        public ActionResult Index() //use this index for employee calendar 
+        {
+            string userId = User.Identity.GetUserId();
+            var employee = db.Employees.Where(e => e.ApplicationId == userId).FirstOrDefault();
+            ViewBag.Name = employee.FirstName + " " + employee.LastName;
+            return View(employee);
         }
 
         // GET: Employees/Details/5

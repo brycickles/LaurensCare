@@ -7,13 +7,13 @@ namespace WebAPI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class FirstMigration : IMigrationMetadata
+    public sealed partial class RestructuredTablesMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FirstMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RestructuredTablesMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202001301546266_FirstMigration"; }
+            get { return "202002010243414_RestructuredTablesMigration"; }
         }
         
         string IMigrationMetadata.Source

@@ -7,13 +7,13 @@ namespace SoloCapstone.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class ChangedModelValuesToIncludeApplicationId : IMigrationMetadata
+    public sealed partial class EventsMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangedModelValuesToIncludeApplicationId));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(EventsMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202001301650489_ChangedModelValuesToIncludeApplicationId"; }
+            get { return "202002011610563_EventsMigration"; }
         }
         
         string IMigrationMetadata.Source

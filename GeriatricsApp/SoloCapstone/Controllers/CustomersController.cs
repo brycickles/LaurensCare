@@ -4,9 +4,12 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Newtonsoft.Json;
 using SoloCapstone.Models;
 
 namespace SoloCapstone.Controllers
@@ -73,26 +76,35 @@ namespace SoloCapstone.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ConsultationRequest(Customer customer)
+        public async System.Threading.Tasks.Task<ActionResult> ConsultationRequest(Customer customer)
         {
             ConsultationRequest ApiConsultPOST = new ConsultationRequest();
             string userId = User.Identity.GetUserId();
 
-            //remember to update database with saved customer
-            var customerFromDb = db.Customers.Where(c => c.ApplicationId == userId).FirstOrDefault();
-            customer.CCity = customerFromDb.CCity;
-            customer.CEmail = customerFromDb.
-            customer.CFirstName = customerFromDb.
-            customer.CLastName = customerFromDb.
-            customer.
-
+            //customer returned object only has property of Consult Message not null
+            var customerFromDb = db.Customers.Where(c => c.ApplicationId == userId).FirstOrDefault();         
+         
             //fill model with relevant data to utilize in POST 
-            ApiConsultPOST.ClientId = customer.CustomerId;
-            ApiConsultPOST.FirstName = customer.CFirstName;
-            ApiConsultPOST.LastName = customer.CLastName;
-            ApiConsultPOST.PhoneNumber = customer.CPhoneNumber;
-            ApiConsultPOST.Message = customer.ConsultMessage; 
+            ApiConsultPOST.ClientId = customerFromDb.CustomerId;
+            ApiConsultPOST.FirstName = customerFromDb.CFirstName;
+            ApiConsultPOST.LastName = customerFromDb.CLastName;
+            ApiConsultPOST.PhoneNumber = customerFromDb.CPhoneNumber;
+            ApiConsultPOST.Message = customer.ConsultMessage;
 
+            using (var client = new HttpClient())
+            {
+                //now ApiConsultPOST object is ready with correct data to be posted to API 
+                client.BaseAddress = new Uri("https://localhost:44397/api/ClientRequests");
+
+                StringContent content = new StringContent(JsonConvert.SerializeObject(ApiConsultPOST));
+
+                HttpResponseMessage response = await client.PostAsync("https://localhost:44397/api/ClientRequests", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    return View("Index", customer);
+                }
+
+            }            
 
             return View("Index", customer);
         }

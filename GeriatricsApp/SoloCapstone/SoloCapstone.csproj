@@ -49,6 +49,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -109,6 +112,9 @@
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Yarn, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Yarn.1.0.1\lib\net45\Yarn.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -178,9 +184,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001301650489_ChangedModelValuesToIncludeApplicationId.cs" />
-    <Compile Include="Migrations\202001301650489_ChangedModelValuesToIncludeApplicationId.Designer.cs">
-      <DependentUpon>202001301650489_ChangedModelValuesToIncludeApplicationId.cs</DependentUpon>
+    <Compile Include="Migrations\202001312147077_firstMigration.cs" />
+    <Compile Include="Migrations\202001312147077_firstMigration.Designer.cs">
+      <DependentUpon>202001312147077_firstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002011610563_EventsMigration.cs" />
+    <Compile Include="Migrations\202002011610563_EventsMigration.Designer.cs">
+      <DependentUpon>202002011610563_EventsMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002011615533_DBSetCreationEvents.cs" />
+    <Compile Include="Migrations\202002011615533_DBSetCreationEvents.Designer.cs">
+      <DependentUpon>202002011615533_DBSetCreationEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -188,6 +202,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeCustomerJunction.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Facility.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -271,6 +286,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Event\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -286,8 +302,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202001301650489_ChangedModelValuesToIncludeApplicationId.resx">
-      <DependentUpon>202001301650489_ChangedModelValuesToIncludeApplicationId.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202001312147077_firstMigration.resx">
+      <DependentUpon>202001312147077_firstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002011610563_EventsMigration.resx">
+      <DependentUpon>202002011610563_EventsMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002011615533_DBSetCreationEvents.resx">
+      <DependentUpon>202002011615533_DBSetCreationEvents.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
