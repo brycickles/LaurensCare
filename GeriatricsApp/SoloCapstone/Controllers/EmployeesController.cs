@@ -25,12 +25,74 @@ namespace SoloCapstone.Controllers
                 return new JsonResult { Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
             }
         }
+
+        [HttpPost]
+        public ActionResult SaveEvent(Event e)
+        {
+            bool status = false;
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                if(e.EventId > 0)
+                {
+                    //update the event since the event has already been created
+                    var v = db.Events.Where(a => a.EventId == e.EventId).FirstOrDefault();
+                    if(v != null)
+                    {
+                        v.Subject = e.Subject;
+                        v.Start = e.Start;
+                        v.End = e.End;
+                        v.Description = e.Description;
+                        v.IsFullDay = e.IsFullDay;
+                        v.ThemeColor = e.ThemeColor;
+                    }
+                }
+                else
+                {
+                    string userId = User.Identity.GetUserId();
+                    e.EmpApplicationId = userId; //set event application id = employee app id to display events specific to employee
+                    db.Events.Add(e);
+                }
+                db.SaveChanges();
+                status = true; 
+            }
+            return new JsonResult { Data = new { status = status } };
+        }
+
+        [HttpPost]
+        public JsonResult DeleteEvent(int eventId)
+        {
+            bool status = false;
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                var e = db.Events.Where(a => a.EventId == eventId).FirstOrDefault();
+                if(e != null)
+                {
+                    db.Events.Remove(e);
+                    db.SaveChanges();
+                    status = true;
+                }
+            }
+            return new JsonResult { Data = new { status = status } };
+        }
+
+
+
+
+
+
+
+
+
+
+
+
         // GET: Employees
         public ActionResult Index() //use this index for employee calendar 
         {
             string userId = User.Identity.GetUserId();
             var employee = db.Employees.Where(e => e.ApplicationId == userId).FirstOrDefault();
             ViewBag.Name = employee.FirstName + " " + employee.LastName;
+            ViewBag.EmployeeId = userId;
             return View(employee);
         }
 

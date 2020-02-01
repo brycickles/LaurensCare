@@ -196,6 +196,14 @@
     <Compile Include="Migrations\202002011615533_DBSetCreationEvents.Designer.cs">
       <DependentUpon>202002011615533_DBSetCreationEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002011920466_AddedEmployeeAppIdToEventModel.cs" />
+    <Compile Include="Migrations\202002011920466_AddedEmployeeAppIdToEventModel.Designer.cs">
+      <DependentUpon>202002011920466_AddedEmployeeAppIdToEventModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002012201170_MadeEventsEndNullable.cs" />
+    <Compile Include="Migrations\202002012201170_MadeEventsEndNullable.Designer.cs">
+      <DependentUpon>202002012201170_MadeEventsEndNullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ConsultationRequest.cs" />
@@ -310,6 +318,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002011615533_DBSetCreationEvents.resx">
       <DependentUpon>202002011615533_DBSetCreationEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002011920466_AddedEmployeeAppIdToEventModel.resx">
+      <DependentUpon>202002011920466_AddedEmployeeAppIdToEventModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002012201170_MadeEventsEndNullable.resx">
+      <DependentUpon>202002012201170_MadeEventsEndNullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
