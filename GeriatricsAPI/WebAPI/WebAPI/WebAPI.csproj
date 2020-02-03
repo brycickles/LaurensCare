@@ -213,9 +213,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002010243414_RestructuredTablesMigration.cs" />
-    <Compile Include="Migrations\202002010243414_RestructuredTablesMigration.designer.cs">
-      <DependentUpon>202002010243414_RestructuredTablesMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202002031348474_FirstMigration.cs" />
+    <Compile Include="Migrations\202002031348474_FirstMigration.designer.cs">
+      <DependentUpon>202002031348474_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -316,8 +316,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002010243414_RestructuredTablesMigration.resx">
-      <DependentUpon>202002010243414_RestructuredTablesMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002031348474_FirstMigration.resx">
+      <DependentUpon>202002031348474_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

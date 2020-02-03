@@ -204,12 +204,10 @@ C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsof
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csproj.CoreCompileInputs.cache
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csproj.CopyComplete
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.dll
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.pdb
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.ChangedModelValuesToIncludeApplicationId.resources
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csproj.GenerateResource.cache
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.dll
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.pdb
@@ -324,3 +322,13 @@ C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\o
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\Yarn.dll
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedEmployeeAppIdToEventModel.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.MadeEventsEndNullable.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\System.Net.Http.Formatting.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Yarn.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\System.Net.Http.Formatting.xml
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.firstMigration.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.EventsMigration.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.DBSetCreationEvents.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedEmployeeAppIdToEventModel.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.MadeEventsEndNullable.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.migration.resources

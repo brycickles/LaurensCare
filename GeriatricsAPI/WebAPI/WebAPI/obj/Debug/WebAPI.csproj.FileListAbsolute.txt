@@ -111,8 +111,6 @@ C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\W
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.CopyComplete
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.dll
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.Migrations.FirstMigration.resources
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.GenerateResource.cache
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\bin\WebAPI.dll.config
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\bin\WebAPI.dll
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\bin\WebAPI.pdb
@@ -227,3 +225,5 @@ C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.Migrations.RestructuredTablesMigration.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.GenerateResource.cache
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.Migrations.FirstMigration.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.GenerateResource.cache

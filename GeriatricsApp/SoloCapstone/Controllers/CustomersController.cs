@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
@@ -25,7 +26,22 @@ namespace SoloCapstone.Controllers
             string userId = User.Identity.GetUserId();
 
             var customer = db.Customers.Where(c => c.ApplicationId == userId).FirstOrDefault();
+            Customer cmodel = customer; 
 
+            //if customer has not yet been consulted, load customer consulting page to let them know their account creation has been paused until an employee has consulted them. 
+            if(cmodel.HasBeenConsulted == false)
+            {
+                return RedirectToAction("NotYetConsulted", customer);
+            }
+            else
+            {
+                //customer has been consulted
+                return View(cmodel);
+            }            
+        }
+
+        public ActionResult NotYetConsulted(Customer customer)
+        {
             return View(customer);
         }
 
@@ -76,37 +92,39 @@ namespace SoloCapstone.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async System.Threading.Tasks.Task<ActionResult> ConsultationRequest(Customer customer)
+        public ActionResult ConsultationRequest(Customer customer)
         {
             ConsultationRequest ApiConsultPOST = new ConsultationRequest();
             string userId = User.Identity.GetUserId();
 
             //customer returned object only has property of Consult Message not null
-            var customerFromDb = db.Customers.Where(c => c.ApplicationId == userId).FirstOrDefault();         
-         
+            var customerFromDb = db.Customers.Where(c => c.ApplicationId == userId).FirstOrDefault();
+            customerFromDb.ConsultMessage = customer.ConsultMessage;
+            db.SaveChanges();
+
             //fill model with relevant data to utilize in POST 
-            ApiConsultPOST.ClientId = customerFromDb.CustomerId;
+            ApiConsultPOST.CustomerId = customerFromDb.CustomerId;
             ApiConsultPOST.FirstName = customerFromDb.CFirstName;
             ApiConsultPOST.LastName = customerFromDb.CLastName;
             ApiConsultPOST.PhoneNumber = customerFromDb.CPhoneNumber;
-            ApiConsultPOST.Message = customer.ConsultMessage;
+            ApiConsultPOST.ConsultingMessage = customer.ConsultMessage;
 
             using (var client = new HttpClient())
             {
                 //now ApiConsultPOST object is ready with correct data to be posted to API 
                 client.BaseAddress = new Uri("https://localhost:44397/api/ClientRequests");
 
-                StringContent content = new StringContent(JsonConvert.SerializeObject(ApiConsultPOST));
-
-                HttpResponseMessage response = await client.PostAsync("https://localhost:44397/api/ClientRequests", content);
-                if (response.IsSuccessStatusCode)
-                {
-                    return View("Index", customer);
-                }
-
-            }            
-
-            return View("Index", customer);
+                string json = JsonConvert.SerializeObject(ApiConsultPOST);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = client.PostAsync("ClientRequests", content);
+                response.Wait();
+                var result = response.Result;
+                if (result.IsSuccessStatusCode)
+                {                    
+                    return RedirectToAction("Index"); //take clients to a processing page where their 
+                }  
+            }    
+            return RedirectToAction("Index");
         }
 
 

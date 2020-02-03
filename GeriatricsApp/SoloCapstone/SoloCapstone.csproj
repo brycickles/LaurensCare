@@ -204,6 +204,10 @@
     <Compile Include="Migrations\202002012201170_MadeEventsEndNullable.Designer.cs">
       <DependentUpon>202002012201170_MadeEventsEndNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002031434498_migration.cs" />
+    <Compile Include="Migrations\202002031434498_migration.Designer.cs">
+      <DependentUpon>202002031434498_migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ConsultationRequest.cs" />
@@ -291,6 +295,7 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\Customers\ConsultationRequest.cshtml" />
+    <Content Include="Views\Customers\NotYetConsulted.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -324,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002012201170_MadeEventsEndNullable.resx">
       <DependentUpon>202002012201170_MadeEventsEndNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002031434498_migration.resx">
+      <DependentUpon>202002031434498_migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
