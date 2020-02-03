@@ -29,7 +29,7 @@ namespace SoloCapstone.Controllers
             Customer cmodel = customer; 
 
             //if customer has not yet been consulted, load customer consulting page to let them know their account creation has been paused until an employee has consulted them. 
-            if(cmodel.HasBeenConsulted == false)
+            if(cmodel.HasBeenConsulted != true)
             {
                 return RedirectToAction("NotYetConsulted", customer);
             }

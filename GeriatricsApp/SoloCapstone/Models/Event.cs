@@ -12,7 +12,9 @@ namespace SoloCapstone.Models
         public int EventId { get; set; }
         public string Subject { get; set; }
         public string Description { get; set; }
+        [Display(Name = "Start Date - DD/MM/YYYY HH:mm AM/PM")]
         public DateTime Start { get; set; }
+        [Display(Name = "End Date - DD/MM/YYYY HH:mm AM/PM")]
         public DateTime? End { get; set; }
         public string ThemeColor { get; set; }
         public bool IsFullDay { get; set; }

@@ -312,12 +312,8 @@
             <th>City</th>
             <th>Street</th>
             <th>State</th>
-            <th>Zip</th>
-
-            @* go to trash collector and mirror this one  *@
-            @*<th></th>
-            <td>@cust.HasBeenConsulted</td>
-            <th></th>*@
+            <th>Zip</th>          
+            <th>Has Been Consulted</th>
         </tr>
         <tr>
             <td>@cust.CFirstName</td>
@@ -328,9 +324,10 @@
             <td>@cust.CStreet</td>
             <td>@cust.CState</td>
             <td>@cust.CZipCode</td>
+            <td>@cust.HasBeenConsulted</td>
             <td>
-                @Html.ActionLink("Consultation Request Message", "RequestMsg", cust.ConsultMessage)
-                @Html.ActionLink("Add To Calendar", "ConsultAdd")
+                @Html.ActionLink("View Consultation Message |", "RequestMsg", cust)
+                @Html.ActionLink("Consulted?", "Consulted", cust)
                 @*//create view for this*@
             </td>
         </tr>

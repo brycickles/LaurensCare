@@ -332,3 +332,6 @@ C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\So
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.MadeEventsEndNullable.resources
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.migration.resources
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.migration.resources
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.ChangedBoolConsultedInCustomerToNullable.resources
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.BackToNonNullableBool.resources

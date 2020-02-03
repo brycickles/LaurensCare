@@ -208,6 +208,14 @@
     <Compile Include="Migrations\202002031434498_migration.Designer.cs">
       <DependentUpon>202002031434498_migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002032153301_ChangedBoolConsultedInCustomerToNullable.cs" />
+    <Compile Include="Migrations\202002032153301_ChangedBoolConsultedInCustomerToNullable.Designer.cs">
+      <DependentUpon>202002032153301_ChangedBoolConsultedInCustomerToNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002032156327_BackToNonNullableBool.cs" />
+    <Compile Include="Migrations\202002032156327_BackToNonNullableBool.Designer.cs">
+      <DependentUpon>202002032156327_BackToNonNullableBool.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ConsultationRequest.cs" />
@@ -296,6 +304,7 @@
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\Customers\ConsultationRequest.cshtml" />
     <Content Include="Views\Customers\NotYetConsulted.cshtml" />
+    <Content Include="Views\Employees\RequestMsg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -332,6 +341,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002031434498_migration.resx">
       <DependentUpon>202002031434498_migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002032153301_ChangedBoolConsultedInCustomerToNullable.resx">
+      <DependentUpon>202002032153301_ChangedBoolConsultedInCustomerToNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002032156327_BackToNonNullableBool.resx">
+      <DependentUpon>202002032156327_BackToNonNullableBool.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

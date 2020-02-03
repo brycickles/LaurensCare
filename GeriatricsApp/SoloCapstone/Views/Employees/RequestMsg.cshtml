@@ -1,0 +1,21 @@
+﻿@model SoloCapstone.Models.Customer
+@{
+    ViewBag.Title = "RequestMsg";
+}
+
+<h2>RequestMsg</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ConsultMessage)
+        </dt>
+        <dd>
+           <textarea rows="8" cols="50">
+                @Model.ConsultMessage
+           </textarea>
+        </dd>
+    </dl>
+</div>
+
+@Html.ActionLink("Back To Employee Home","Index")

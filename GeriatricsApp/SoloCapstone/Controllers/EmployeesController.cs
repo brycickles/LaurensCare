@@ -75,6 +75,23 @@ namespace SoloCapstone.Controllers
         }
         #endregion
 
+        #region consultation actions
+        public ActionResult Consulted(Customer customer)
+        {
+            var cust = db.Customers.Where(c => c.CustomerId == customer.CustomerId).FirstOrDefault();
+            cust.HasBeenConsulted = true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult RequestMsg(Customer customer)
+        {
+            return View(customer);            
+        }
+
+        #endregion
+
+
         // GET: Employees
         public ActionResult Index() //use this index for employee calendar 
         {            
