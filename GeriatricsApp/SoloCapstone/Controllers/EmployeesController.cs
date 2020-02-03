@@ -89,6 +89,28 @@ namespace SoloCapstone.Controllers
             return View(customer);            
         }
 
+        public ActionResult AddToCalendar(Customer customer)
+        {
+            Event newEvent = new Event();
+            string userId = User.Identity.GetUserId();
+            newEvent.EmpApplicationId = userId;
+
+            newEvent.Subject = "Consultation Request: " + customer.CLastName;
+            string currMonthMM = DateTime.Now.ToString("MM");
+            string currYearYYYY = DateTime.Now.Year.ToString();
+            string inputDate = "01/" + currMonthMM + "/" + currYearYYYY + " 1:00 PM";
+            DateTime dt = DateTime.Parse(inputDate);
+            newEvent.Start = dt;
+            newEvent.End = null;
+            newEvent.IsFullDay = true;
+            newEvent.ThemeColor = "Blue";
+            newEvent.Description = "This is a scheduled consultation request for " + customer.CFirstName + " " + customer.CLastName + " at " + customer.CStreet + ", " + customer.CCity + ", " + customer.CState + "\nPhone Number: " + customer.CPhoneNumber ;
+
+            db.Events.Add(newEvent);
+            db.SaveChanges();
+            
+            return RedirectToAction("Index");
+        }
         #endregion
 
 

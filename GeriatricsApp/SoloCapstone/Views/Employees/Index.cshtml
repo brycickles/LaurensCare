@@ -327,7 +327,8 @@
             <td>@cust.HasBeenConsulted</td>
             <td>
                 @Html.ActionLink("View Consultation Message |", "RequestMsg", cust)
-                @Html.ActionLink("Consulted?", "Consulted", cust)
+                @Html.ActionLink("Consulted? |", "Consulted", cust)
+                @Html.ActionLink("Add To Calendar", "AddToCalendar", cust)
                 @*//create view for this*@
             </td>
         </tr>
