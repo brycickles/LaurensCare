@@ -1,4 +1,4 @@
-﻿@model SoloCapstone.Models.Employee
+﻿@using SoloCapstone.Models;
 @{
     ViewBag.Title = "Index";
 }
@@ -7,6 +7,7 @@
 
 <div id="calender"></div>
 
+@* Calendar Section *@
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -29,7 +30,6 @@
         </div>
     </div>
 </div>
-
 @*save event model for troubleshooting*@
 <div id="myModalSave" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -92,12 +92,9 @@
         </div>
     </div>
 </div>
-
 <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet" />
 <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" rel="stylesheet" media="print" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-
-
 @section Scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
@@ -167,15 +164,15 @@
                             eventId: 0,
                             title: '',
                             description: '',
-                            start: start, 
-                            end: end, 
-                            allDay: false, 
+                            start: start,
+                            end: end,
+                            allDay: false,
                             color: ''
                         };
                         openAddEditForm();
                         $('#calendar').fullCalendar('unselect');
-                    }, 
-                    editable: true, 
+                    },
+                    editable: true,
                     eventDrop: function (event) {
                         var data = {
                             EventId: event.eventId,
@@ -221,7 +218,7 @@
                     $('#divEndDate').hide();
                 }
                 else {
-                     $('#divEndDate').show();
+                    $('#divEndDate').show();
                 }
             });
             function openAddEditForm() {
@@ -231,7 +228,7 @@
                     $('#txtStart').val(selectedEvent.start.format('DD/MM/YYYY HH:mm A'));
                     $('#chkIsFullDay').prop("checked", selectedEvent.allDay || false);
                     $('#chkIsFullDay').change();
-                    $('#txtEnd').val(selectedEvent.end != null? selectedEvent.end.format('DD/MM/YYYY HH:mm A'): '');
+                    $('#txtEnd').val(selectedEvent.end != null ? selectedEvent.end.format('DD/MM/YYYY HH:mm A') : '');
                     $('#txtDescription').val(selectedEvent.description);
                     $('#ddThemeColor').val(selectedEvent.color);
                 }
@@ -278,23 +275,65 @@
 
             function SaveEvent(data) {
                 $.ajax({
-                        type: "POST",
-                        url: "/employees/SaveEvent",
-                        data: data,
-                        success: function (data) {
-                            if (data.status) {
-                                //refresh calendar
-                                FetchEventAndRenderCalendar();
-                                $('#myModalSave').modal('hide');
-                            }
-                        },
-                        error: function () {
-                            alert('failed');
+                    type: "POST",
+                    url: "/employees/SaveEvent",
+                    data: data,
+                    success: function (data) {
+                        if (data.status) {
+                            //refresh calendar
+                            FetchEventAndRenderCalendar();
+                            $('#myModalSave').modal('hide');
                         }
+                    },
+                    error: function () {
+                        alert('failed');
+                    }
                 })
             }
         })
     </script>
 }
+@* End Calendar Section *@
 
+@{
+    IEnumerable<Customer> customersToBeConsulted = ViewData["Customers"] as IEnumerable<Customer>;
+    Employee employee = ViewData["Employees"] as Employee;
+}
 
+<h2>Customers Awaiting Consultation</h2>
+@foreach (Customer cust in customersToBeConsulted)
+{
+    <table class="table">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>City</th>
+            <th>Street</th>
+            <th>State</th>
+            <th>Zip</th>
+
+            @* go to trash collector and mirror this one  *@
+            @*<th></th>
+            <td>@cust.HasBeenConsulted</td>
+            <th></th>*@
+        </tr>
+        <tr>
+            <td>@cust.CFirstName</td>
+            <td>@cust.CLastName</td>
+            <td>@cust.CEmail</td>
+            <td>@cust.CPhoneNumber</td>
+            <td>@cust.CCity</td>
+            <td>@cust.CStreet</td>
+            <td>@cust.CState</td>
+            <td>@cust.CZipCode</td>
+            <td>
+                @Html.ActionLink("Consultation Request Message", "RequestMsg", cust.ConsultMessage)
+                @Html.ActionLink("Add To Calendar", "ConsultAdd")
+                @*//create view for this*@
+            </td>
+        </tr>
+    </table>
+    
+}  

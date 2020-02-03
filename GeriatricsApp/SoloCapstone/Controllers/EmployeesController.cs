@@ -17,6 +17,7 @@ namespace SoloCapstone.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        #region calendar Action/Json Results
         public JsonResult GetEvents()
         {
             using (ApplicationDbContext db = new ApplicationDbContext())
@@ -25,7 +26,6 @@ namespace SoloCapstone.Controllers
                 return new JsonResult { Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
             }
         }
-
         [HttpPost]
         public ActionResult SaveEvent(Event e)
         {
@@ -57,7 +57,6 @@ namespace SoloCapstone.Controllers
             }
             return new JsonResult { Data = new { status = status } };
         }
-
         [HttpPost]
         public JsonResult DeleteEvent(int eventId)
         {
@@ -74,26 +73,24 @@ namespace SoloCapstone.Controllers
             }
             return new JsonResult { Data = new { status = status } };
         }
-
-
-
-
-
-
-
-
-
-
-
+        #endregion
 
         // GET: Employees
         public ActionResult Index() //use this index for employee calendar 
-        {
+        {            
             string userId = User.Identity.GetUserId();
             var employee = db.Employees.Where(e => e.ApplicationId == userId).FirstOrDefault();
             ViewBag.Name = employee.FirstName + " " + employee.LastName;
             ViewBag.EmployeeId = userId;
-            return View(employee);
+
+            //take list of customers that have not been consulted and display it in a view to employees index page to review (reference trash collector to get this one.)           
+            var CustomersToBeConsulted = db.Customers.Where(c => c.HasBeenConsulted == false).ToList();
+            List<Customer> ConsultationList = CustomersToBeConsulted;
+
+            ViewData["Employees"] = employee;
+            ViewData["Customers"] = ConsultationList;
+
+            return View();
         }
 
         // GET: Employees/Details/5
