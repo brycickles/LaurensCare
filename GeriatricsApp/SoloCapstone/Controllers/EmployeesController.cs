@@ -44,6 +44,8 @@ namespace SoloCapstone.Controllers
                         v.Description = e.Description;
                         v.IsFullDay = e.IsFullDay;
                         v.ThemeColor = e.ThemeColor;
+                        v.JournalEntry = e.JournalEntry;
+                        v.CustomerId = e.CustomerId;
                     }
                 }
                 else

@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -196,6 +198,14 @@
     <Compile Include="Migrations\202002041617510_CreatedReviewsTable.Designer.cs">
       <DependentUpon>202002041617510_CreatedReviewsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002061618342_AddedNullableJournalEntry.cs" />
+    <Compile Include="Migrations\202002061618342_AddedNullableJournalEntry.Designer.cs">
+      <DependentUpon>202002061618342_AddedNullableJournalEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002061716403_AddedCustomerIdToEventsTable.cs" />
+    <Compile Include="Migrations\202002061716403_AddedCustomerIdToEventsTable.Designer.cs">
+      <DependentUpon>202002061716403_AddedCustomerIdToEventsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ConsultationRequest.cs" />
@@ -319,6 +329,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002041617510_CreatedReviewsTable.resx">
       <DependentUpon>202002041617510_CreatedReviewsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002061618342_AddedNullableJournalEntry.resx">
+      <DependentUpon>202002061618342_AddedNullableJournalEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002061716403_AddedCustomerIdToEventsTable.resx">
+      <DependentUpon>202002061716403_AddedCustomerIdToEventsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

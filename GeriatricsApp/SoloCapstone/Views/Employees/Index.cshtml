@@ -6,6 +6,10 @@
 <h2>Hello, @ViewBag.Name, here is your schedule</h2>
 
 <div id="calender"></div>
+@{
+    IEnumerable<Customer> customersToBeConsulted = ViewData["Customers"] as IEnumerable<Customer>;
+    Employee employee = ViewData["Employees"] as Employee;
+}
 
 @* Calendar Section *@
 <div id="myModal" class="modal fade" role="dialog">
@@ -83,6 +87,19 @@
                             <option value="orange">Orange</option>
                             <option value="yellow">Yellow</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Which Customer?</label>
+                        <select id="ddCustomerTable" class="form-control">
+                            @foreach (Customer cust in customersToBeConsulted)
+                                {
+                                    <option value="@cust.CustomerId">@cust.CFirstName @cust.CLastName</option>
+                                }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Journal Entry</label>
+                        <textarea input type="text" id="txtJournalEntry" class="form-control"></textarea>
                     </div>
                     <button type="button" id="btnSave" class="btn btn-success">Save</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -167,7 +184,8 @@
                             start: start,
                             end: end,
                             allDay: false,
-                            color: ''
+                            color: '',
+                            journalEntry: ''
                         };
                         openAddEditForm();
                         $('#calendar').fullCalendar('unselect');
@@ -181,7 +199,8 @@
                             End: event.end != null ? event.end.format('DD/MM/YYYY HH:mm A') : null,
                             Description: event.description,
                             ThemeColor: event.color,
-                            IsFullDay: event.allDay
+                            IsFullDay: event.allDay,
+                            JournalEntry: event.journalEntry
                         };
                         SaveEvent(data);
                     }
@@ -231,6 +250,8 @@
                     $('#txtEnd').val(selectedEvent.end != null ? selectedEvent.end.format('DD/MM/YYYY HH:mm A') : '');
                     $('#txtDescription').val(selectedEvent.description);
                     $('#ddThemeColor').val(selectedEvent.color);
+                    $('#txtJournalEntry').val(selectedEvent.journalEntry);
+                    //$('#ddCustomerTable').val(selectedEvent.customerId);
                 }
                 $('#myModal').modal('hide');
                 $('#myModalSave').modal();
@@ -267,7 +288,10 @@
                     End: $('#chkIsFullDay').is(':checked') ? null : $('#txtEnd').val().trim(),
                     Description: $('#txtDescription').val(),
                     ThemeColor: $('#ddThemeColor').val(),
-                    IsFullDay: $('#chkIsFullDay').is(':checked')
+                    IsFullDay: $('#chkIsFullDay').is(':checked'),
+                    JournalEntry: $('#txtJournalEntry').val().trim(),
+                    CustomerId: $('#ddCustomerTable').val()
+                    
                 }
                 //call function to submit data to server
                 SaveEvent(data);
@@ -295,11 +319,6 @@
 }
 @* End Calendar Section *@
 
-@{
-    IEnumerable<Customer> customersToBeConsulted = ViewData["Customers"] as IEnumerable<Customer>;
-    Employee employee = ViewData["Employees"] as Employee;
-}
-
 <h2>Customers Awaiting Consultation</h2>
 @foreach (Customer cust in customersToBeConsulted)
 {
@@ -312,7 +331,7 @@
             <th>City</th>
             <th>Street</th>
             <th>State</th>
-            <th>Zip</th>          
+            <th>Zip</th>
             <th>Has Been Consulted</th>
         </tr>
         <tr>
@@ -333,5 +352,5 @@
             </td>
         </tr>
     </table>
-    
+
 }  

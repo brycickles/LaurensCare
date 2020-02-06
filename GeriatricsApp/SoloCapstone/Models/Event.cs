@@ -19,5 +19,7 @@ namespace SoloCapstone.Models
         public string ThemeColor { get; set; }
         public bool IsFullDay { get; set; }
         public string EmpApplicationId { get; set; }
+        public string JournalEntry { get; set; }
+        public string CustomerId { get; set; }
     }
 }
