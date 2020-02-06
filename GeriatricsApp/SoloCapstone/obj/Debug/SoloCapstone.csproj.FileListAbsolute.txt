@@ -208,7 +208,6 @@ C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\So
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csproj.CopyComplete
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.dll
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.pdb
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csproj.GenerateResource.cache
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.dll
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.pdb
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\SoloCapstone.dll.config
@@ -325,13 +324,10 @@ C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\o
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\System.Net.Http.Formatting.dll
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Yarn.dll
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\System.Net.Http.Formatting.xml
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.firstMigration.resources
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.EventsMigration.resources
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.DBSetCreationEvents.resources
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedEmployeeAppIdToEventModel.resources
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.MadeEventsEndNullable.resources
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.migration.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.migration.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.ChangedBoolConsultedInCustomerToNullable.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.BackToNonNullableBool.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.FirstMigration.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csproj.GenerateResource.cache
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedImageURLToFacilitiesModel.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.CreatedReviewsTable.resources

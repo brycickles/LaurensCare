@@ -20,6 +20,7 @@ namespace SoloCapstone.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Review> Reviews { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }

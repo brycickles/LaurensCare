@@ -113,6 +113,18 @@ namespace SoloCapstone.Controllers
         }
         #endregion
 
+        public ActionResult AddFacilityReview()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddFacilityReview(Facility facility)
+        {
+            db.Facilities.Add(facility);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
         // GET: Employees
         public ActionResult Index() //use this index for employee calendar 

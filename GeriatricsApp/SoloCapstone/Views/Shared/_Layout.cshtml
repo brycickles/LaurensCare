@@ -27,13 +27,13 @@
                     {
                         <li>@Html.ActionLink("Customer Home", "Index", "Customers")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Leave A Review", "WriteReview", "Customers")</li>
+                        <li>@Html.ActionLink("Facility Reviews", "FacilityReviews", "Customers")</li>
                     }
                     @if (User.IsInRole("Employee"))
                     {
                         <li>@Html.ActionLink("Employee Home", "Index", "Employees")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Add Facility Review", "AddFacilityReview", "Employees")</li>
                     }
 
 

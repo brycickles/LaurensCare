@@ -40,6 +40,24 @@ namespace SoloCapstone.Controllers
             }            
         }
 
+        public ActionResult WriteReview()
+        {
+            return View(); 
+        }
+
+        [HttpPost]
+        public ActionResult WriteReview(Review review)
+        {
+            db.Reviews.Add(review);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult FacilityReviews()
+        {
+            List<Facility> facility = db.Facilities.ToList();
+            
+            return View(facility);
+        }
         public ActionResult NotYetConsulted(Customer customer)
         {
             return View(customer);

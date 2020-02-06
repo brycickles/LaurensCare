@@ -24,5 +24,7 @@ namespace SoloCapstone.Models
         public string EmployeeRating { get; set; }
         [Display(Name = "Overall Facility Rating")]
         public string FacilityRating { get; set; }
+
+        public string ImageURL { get; set; }
     }
 }
