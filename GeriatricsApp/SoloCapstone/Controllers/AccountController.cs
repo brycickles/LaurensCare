@@ -140,8 +140,8 @@ namespace SoloCapstone.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Lauren"))
-                                    .ToList(), "Name", "Name");
+            //ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Lauren"))
+            //                        .ToList(), "Name", "Name");
             return View();
         }
 
@@ -152,8 +152,9 @@ namespace SoloCapstone.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+            model.UserRoles = "Customer";
             if (ModelState.IsValid)
-            {
+            {                
                 var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
