@@ -1,31 +1,48 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = null;
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Laurens Care Geriatrics</title>
+    <link rel="stylesheet" href="~/Content/Style.css" />
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="~/Images/LaurensCare.png" alt="pathing issue" />
+            </div>
+            <ul class="nav-area">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                @if (User.IsInRole("Customer"))
+                {
+                    <li><a>@Html.ActionLink("Customer Home", "Index", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("About", "About", "Home")</a></li>
+                    <li><a>@Html.ActionLink("Leave Us A Review", "WriteReview", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Facility Reviews", "FacilityReviews", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("View Journal Entries", "CustomerJournals", "Customers")</a></li>
+                }
+                else if (User.IsInRole("Employee"))
+                {
+                    <li><a>@Html.ActionLink("Employee Home", "Index", "Employees")</a></li>
+                    <li><a>@Html.ActionLink("Add Facility Review", "AddFacilityReview", "Employees")</a></li>
+                }
+                else
+                {
+                    <li><a>@Html.ActionLink("Register", "Register", "Account")</a></li>
+                    <li><a>@Html.ActionLink("Login", "Login", "Account")</a></li>
+                }
+            </ul>
+        </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+        <div class="welcome-text">
+            <h1>Lauren's Care</h1>
+            <a href="#">Contact Us</a>
+        </div>
+    </header>
+</body>
+</html>

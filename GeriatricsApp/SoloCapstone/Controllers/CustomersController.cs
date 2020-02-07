@@ -40,6 +40,19 @@ namespace SoloCapstone.Controllers
             }            
         }
 
+        public ActionResult CustomerJournals()
+        {
+            string userId = User.Identity.GetUserId();
+            Customer cust = db.Customers.Where(c => c.ApplicationId == userId).FirstOrDefault();
+            string custId = Convert.ToString(cust.CustomerId);
+            List<Event> journalsByCustomer = db.Events.Where(e => e.CustomerId == custId).ToList();
+            return View(journalsByCustomer);
+        }
+        public ActionResult Directions(Facility facility)
+        {
+            return View(facility);
+        }
+
         public ActionResult WriteReview()
         {
             return View(); 

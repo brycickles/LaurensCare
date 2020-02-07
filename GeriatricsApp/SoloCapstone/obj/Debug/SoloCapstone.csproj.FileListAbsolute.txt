@@ -315,7 +315,6 @@ C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\o
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csproj.GenerateResource.cache
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\System.Net.Http.Formatting.dll
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\System.Net.Http.Formatting.xml
-C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\Yarn.dll
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\System.Net.Http.Formatting.dll
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Yarn.dll
@@ -328,3 +327,5 @@ C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\o
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.CreatedReviewsTable.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedNullableJournalEntry.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedCustomerIdToEventsTable.resources
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedLatLongToFacilities.resources
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache

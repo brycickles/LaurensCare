@@ -26,5 +26,7 @@ namespace SoloCapstone.Models
         public string FacilityRating { get; set; }
 
         public string ImageURL { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }
