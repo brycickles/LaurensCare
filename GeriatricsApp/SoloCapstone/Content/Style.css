@@ -80,6 +80,21 @@ section{
     font-family: sans-serif;
     background: #333;
 }
+textarea {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #808080;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+
+}
 .box {
     width: 300px;
     padding: 40px;

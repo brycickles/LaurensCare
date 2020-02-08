@@ -23,15 +23,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Lauren's Care", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                     @if (User.IsInRole("Customer"))
                     {
-                        <li>@Html.ActionLink("Customer Home", "Index", "Customers")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Leave Us A Review", "WriteReview", "Customers")</li>
-                        <li>@Html.ActionLink("Facility Reviews", "FacilityReviews", "Customers")</li>
-                        <li>@Html.ActionLink("View Journal Entries", "CustomerJournals", "Customers")</li>
-
+                        <li><a>@Html.ActionLink("Leave A Review", "WriteReview", "Customers")</a></li>
+                        <li><a>@Html.ActionLink("Facilies", "FacilityReviews", "Customers")</a></li>
+                        <li><a>@Html.ActionLink("Journal Entries", "CustomerJournals", "Customers")</a></li>
 
                     }
                     @if (User.IsInRole("Employee"))

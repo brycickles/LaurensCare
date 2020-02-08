@@ -2,48 +2,113 @@
 
 @{
     ViewBag.Title = "FacilityReviews";
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Laurens Care Geriatrics</title>
+    <link rel="stylesheet" href="~/Content/JournalStyle.css" />
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="~/Images/LaurensCare.png" alt="pathing issue" />
+            </div>
+            <ul class="nav-area">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                @if (User.IsInRole("Customer"))
+                {
+                    <li><a>@Html.ActionLink("Leave A Review", "WriteReview", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Facilies", "FacilityReviews", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Journal Entries", "CustomerJournals", "Customers")</a></li>
+                }
+                else if (User.IsInRole("Employee"))
+                {
+                    <li><a>@Html.ActionLink("Employee Home", "Index", "Employees")</a></li>
+                    <li><a>@Html.ActionLink("Add Facility Review", "AddFacilityReview", "Employees")</a></li>
+                }
+                else
+                {
+                    <li><a>@Html.ActionLink("Register", "Register", "Account")</a></li>
+                    <li><a>@Html.ActionLink("Login", "Login", "Account")</a></li>
+                }
+            </ul>
+        </div>
+
+        <section>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.URL)</th>
+                        <th>@Html.DisplayNameFor(model => model.EmployeeRating)</th>
+                        <th>@Html.DisplayNameFor(model => model.FacilityRating)</th>
+                        <th>Directions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td><a href=@Html.DisplayFor(modelItem => item.URL)>Website</a></td>
+                            <td>@Html.DisplayFor(modelItem => item.EmployeeRating)</td>
+                            <td>@Html.DisplayFor(modelItem => item.FacilityRating)</td>
+                            <td>@Html.ActionLink("Directions", "Directions", item);</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+    </header>
+</body>
+</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
 }
 
-<h2>FacilityReviews</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.URL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EmployeeRating)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FacilityRating)
-        </th>
-    </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.URL)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Description)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.EmployeeRating)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.FacilityRating)
-    </td>
-    @Html.ActionLink("Directions", "Directions", item);
-</tr>
-}
 
-</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

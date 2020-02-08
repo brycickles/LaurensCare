@@ -48,6 +48,9 @@ namespace SoloCapstone.Controllers
             List<Event> journalsByCustomer = db.Events.Where(e => e.CustomerId == custId).ToList();
             return View(journalsByCustomer);
         }
+        public ActionResult ViewJournal(Event e){
+            return View(e);
+        }
         public ActionResult Directions(Facility facility)
         {
             return View(facility);
