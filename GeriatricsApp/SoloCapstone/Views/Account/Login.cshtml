@@ -43,7 +43,7 @@
         
                 
         <section id="loginForm">
-            <div class="box">
+            <div class="box" id="nonCreateBox">
                 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                 {
                     @Html.AntiForgeryToken()

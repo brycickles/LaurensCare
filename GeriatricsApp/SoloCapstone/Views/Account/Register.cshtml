@@ -42,7 +42,7 @@
         </div>
 
         <section id="registerForm">
-            <div class="box">
+            <div class="box" id="nonCreateBox">
                  @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                   {
                     @Html.AntiForgeryToken()

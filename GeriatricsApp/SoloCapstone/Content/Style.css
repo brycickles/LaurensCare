@@ -132,5 +132,17 @@ section{
 }
 .box input[type = "submit"]:hover {
     background: #1da50d;
-
+}
+.container{
+    position:page;
+    width: auto;
+    height: auto;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: auto;
+    top: 1000px;
+    margin: 15px;
+    /*box-sizing: border-box;*/
 }
