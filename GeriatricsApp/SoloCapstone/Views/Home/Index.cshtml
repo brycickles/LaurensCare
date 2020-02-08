@@ -20,11 +20,10 @@
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 @if (User.IsInRole("Customer"))
                 {
-                    <li><a>@Html.ActionLink("Customer Home", "Index", "Customers")</a></li>
-                    <li><a>@Html.ActionLink("About", "About", "Home")</a></li>
-                    <li><a>@Html.ActionLink("Leave Us A Review", "WriteReview", "Customers")</a></li>
-                    <li><a>@Html.ActionLink("Facility Reviews", "FacilityReviews", "Customers")</a></li>
-                    <li><a>@Html.ActionLink("View Journal Entries", "CustomerJournals", "Customers")</a></li>
+                    @*<li><a>@Html.ActionLink("About", "About", "Home")</a></li>*@
+                    <li><a>@Html.ActionLink("Leave A Review", "WriteReview", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Facilies", "FacilityReviews", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Journal Entries", "CustomerJournals", "Customers")</a></li>
                 }
                 else if (User.IsInRole("Employee"))
                 {

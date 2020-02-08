@@ -204,7 +204,6 @@ C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsof
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csproj.CoreCompileInputs.cache
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csproj.CopyComplete
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.dll
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.pdb
@@ -329,3 +328,7 @@ C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\o
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedCustomerIdToEventsTable.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedLatLongToFacilities.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedNullableJournalEntry.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedCustomerIdToEventsTable.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedLatLongToFacilities.resources
