@@ -8,8 +8,11 @@ using System.Net;
 using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Microsoft.AspNet.Identity;
 using SoloCapstone.Models;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
 namespace SoloCapstone.Controllers
 {
@@ -57,8 +60,24 @@ namespace SoloCapstone.Controllers
                 db.SaveChanges();
                 status = true; 
             }
+            sendSMS();
             return new JsonResult { Data = new { status = status } };
         }
+
+        private void sendSMS()
+        {
+
+            TwilioClient.Init(Key.accountSid, Key.authToken);
+
+            var message = MessageResource.Create(
+                body: "A new journal entry has been created for your resident!",
+                from: new Twilio.Types.PhoneNumber("+12019891276"),
+                to: new Twilio.Types.PhoneNumber("+19206557490")
+            );
+
+            Console.WriteLine(message.Sid);
+        }
+
         [HttpPost]
         public JsonResult DeleteEvent(int eventId)
         {
@@ -115,6 +134,15 @@ namespace SoloCapstone.Controllers
         }
         #endregion
 
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session["UserInfo"] = null;
+            Session.Clear();
+            Session.RemoveAll();
+            Session.Abandon();
+            return RedirectToAction("Login", "Account");
+        }
         public ActionResult AddFacilityReview()
         {
             return View();
@@ -140,8 +168,12 @@ namespace SoloCapstone.Controllers
             var CustomersToBeConsulted = db.Customers.Where(c => c.HasBeenConsulted == false).ToList();
             List<Customer> ConsultationList = CustomersToBeConsulted;
 
+            var allCustomersList = db.Customers.ToList();
+            List<Customer> allCustomers = allCustomersList;
+
             ViewData["Employees"] = employee;
             ViewData["Customers"] = ConsultationList;
+            ViewData["AllCustomers"] = allCustomers;
 
             return View();
         }

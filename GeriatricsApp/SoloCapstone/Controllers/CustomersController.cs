@@ -7,8 +7,10 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Microsoft.AspNet.Identity;
 using Newtonsoft.Json;
 using SoloCapstone.Models;
@@ -48,11 +50,36 @@ namespace SoloCapstone.Controllers
             List<Event> journalsByCustomer = db.Events.Where(e => e.CustomerId == custId).ToList();
             return View(journalsByCustomer);
         }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session["UserInfo"] = null;
+            Session.Clear();
+            Session.RemoveAll();
+            Session.Abandon();
+            return RedirectToAction("Login", "Account");
+        }
         public ActionResult ViewJournal(Event e){
             return View(e);
         }
-        public ActionResult Directions(Facility facility)
+        public async Task<ActionResult> Directions(Facility facility)
         {
+            string key = Key.myKey;
+            string userId = User.Identity.GetUserId();
+            Customer cust = db.Customers.Where(c => c.ApplicationId == userId).FirstOrDefault();
+            string location = cust.CStreet + "+" + cust.CCity + "+" + cust.CState + "+" + cust.CZipCode;
+            HttpClient client = new HttpClient();
+            string url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + location + "&key=" + key;
+            HttpResponseMessage response = await client.GetAsync(url);
+            string result = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+            {
+                GeoModel GeoResult = JsonConvert.DeserializeObject<GeoModel>(result);
+                ViewBag.CustLat = GeoResult.results[0].geometry.location.lat;
+                ViewBag.CustLng = GeoResult.results[0].geometry.location.lng;
+                ViewBag.Key = "https://maps.googleapis.com/maps/api/js?key=" + key + "&callback=initMap";
+                return View(facility);
+            }
             return View(facility);
         }
 

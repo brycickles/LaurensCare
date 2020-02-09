@@ -1,60 +1,125 @@
 ﻿@model SoloCapstone.Models.Facility
 @{
     ViewBag.Title = "Directions";
+    Layout = null;
 }
 
-<h2>Directions</h2>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Laurens Care Geriatrics</title>
+    <link rel="stylesheet" href="~/Content/MapStyle.css" />
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="~/Images/LaurensCare.png" alt="pathing issue" />
+            </div>
+            <ul class="nav-area">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                @if (User.IsInRole("Customer"))
+                {
+                    <li><a>@Html.ActionLink("Leave A Review", "WriteReview", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Facilities", "FacilityReviews", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Journal Entries", "CustomerJournals", "Customers")</a></li>
+                }
+                else if (User.IsInRole("Employee"))
+                {
+                    <li><a>@Html.ActionLink("Employee Home", "Index", "Employees")</a></li>
+                    <li><a>@Html.ActionLink("Add Facility Review", "AddFacilityReview", "Employees")</a></li>
+                }
+                else
+                {
+                    <li><a>@Html.ActionLink("Register", "Register", "Account")</a></li>
+                    <li><a>@Html.ActionLink("Login", "Login", "Account")</a></li>
+                }
+            </ul>
+        </div>
 
-<div id="map"></div>
-<script>
-    function initMap() {
-    var pointA = new google.maps.LatLng(@ViewBag.CustLat, @ViewBag.CustLng),
-        pointB = new google.maps.LatLng(@Model.Latitude, @Model.Longitude),
-        myOptions = {
+
+
+    </header>
+    <section>
+        <div id="map"></div>
+        <script>
+        function initMap() {
+            var pointA = new google.maps.LatLng(@ViewBag.CustLat, @ViewBag.CustLng),
+            pointB = new google.maps.LatLng(@Model.Latitude, @Model.Longitude),
+            myOptions = {
             zoom: 7,
             center: pointA
-        },
-        map = new google.maps.Map(document.getElementById('map'), myOptions),
-        // Instantiate a directions service.
-        directionsService = new google.maps.DirectionsService,
-        directionsDisplay = new google.maps.DirectionsRenderer({
-            map: map
-        }),
-        markerA = new google.maps.Marker({
-            position: pointA,
-            title: "point A",
-            label: "A",
-            map: map
-        }),
-        markerB = new google.maps.Marker({
-            position: pointB,
-            title: "point B",
-            label: "B",
-            map: map
-        });
-
-    // get route from A to B
-    calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB);
-
-}
-
-
-
-function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB) {
-    directionsService.route({
-        origin: pointA,
-        destination: pointB,
-        avoidTolls: true,
-        avoidHighways: false,
-        travelMode: google.maps.TravelMode.DRIVING
-    }, function (response, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(response);
-        } else {
-            window.alert('Directions request failed due to ' + status);
+            },
+            map = new google.maps.Map(document.getElementById('map'), myOptions),
+            // Instantiate a directions service.
+            directionsService = new google.maps.DirectionsService,
+            directionsDisplay = new google.maps.DirectionsRenderer({
+                map: map
+            }),
+            markerA = new google.maps.Marker({
+                position: pointA,
+                title: "point A",
+                label: "A",
+                map: map
+            }),
+            markerB = new google.maps.Marker({
+                position: pointB,
+                title: "point B",
+                label: "B",
+                map: map
+            });
+            // get route from A to B
+            calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB);
         }
-    });
+
+
+        function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB) {
+            directionsService.route({
+            origin: pointA,
+            destination: pointB,
+            avoidTolls: true,
+            avoidHighways: false,
+            travelMode: google.maps.TravelMode.DRIVING
+            }, function (response, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+                }
+            });
+        }
+        </script>
+        <script async defer src=@ViewBag.Key></script>
+    </section>
+
+</body>
+</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
 }
 
-</script>
-<script async defer src=@ViewBag.Key></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

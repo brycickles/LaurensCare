@@ -23,7 +23,7 @@
                 @if (User.IsInRole("Customer"))
                 {
                     <li><a>@Html.ActionLink("Leave A Review", "WriteReview", "Customers")</a></li>
-                    <li><a>@Html.ActionLink("Facilies", "FacilityReviews", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Facilities", "FacilityReviews", "Customers")</a></li>
                     <li><a>@Html.ActionLink("Journal Entries", "CustomerJournals", "Customers")</a></li>
                 }
                 else if (User.IsInRole("Employee"))

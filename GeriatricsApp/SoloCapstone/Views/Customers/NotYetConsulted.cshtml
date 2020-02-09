@@ -2,9 +2,40 @@
 
 @{
     ViewBag.Title = "NotYetConsulted";
+    Layout = null;
 }
 
-<h2>Thank you for your consultation request; an employee will reach out to you shortly to schedule a time for consultation!</h2>
-<h2>Once you have been consulted, if home care has been chosen as a desired plan of action, our employees will provide you further access to utilize our services as a customer.</h2>
-<h2>Thank you!</h2>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Laurens Care Geriatrics</title>
+    <link rel="stylesheet" href="~/Content/Style.css" />
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="~/Images/LaurensCare.png" alt="pathing issue" />
+            </div>
+            <ul class="nav-area">
+                <li><a>@Html.ActionLink("Log Out", "LogOut", "Customers")</a></li>
+            </ul>
+        </div>
 
+        <div class="box">
+            <h2>
+                Thank you for filing a consultation request with Lauren's Care! An employee will contact you
+                soon to schedule a consultation. After your consultation, if home care is chosen as your resident's
+                next steps, we will grant your account further access to utilize our services. Thank you!<br />-Lauren
+            </h2>
+        </div>
+            
+        
+
+    </header>
+</body>
+</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

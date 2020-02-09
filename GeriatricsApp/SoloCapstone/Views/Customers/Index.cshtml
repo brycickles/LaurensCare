@@ -1,109 +1,36 @@
-﻿@model SoloCapstone.Models.Customer
-
+﻿
 @{
     ViewBag.Title = "Index";
+    Layout = null;
 }
 
-<h2>Index</h2>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Laurens Care Geriatrics</title>
+    <link rel="stylesheet" href="~/Content/Style.css" />
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="~/Images/LaurensCare.png" alt="pathing issue" />
+            </div>
+            <ul class="nav-area">
+                <li><a>@Html.ActionLink("Log Out", "LogOut", "Customers")</a></li>
+            </ul>
+        </div>
 
+        <section>            
+            <h2>Thank you for filing a consultation request with Lauren's Care! An employee will contact you<br />
+                soon to schedule a consultation. After your consultation, if home care is chosen as your resident's<br />
+                next steps, we will grant your account further access to utilize our services. Thank you!</h2>
+        </section>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CFirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CLastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CPhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CCity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CStreet)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CState)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CZipCode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RFirsName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RLastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RCity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RStreet)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RState)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RZipCode)
-        </th>
-        <th></th>
-    </tr>
-
-
-    <tr>
-        <td>
-            @Html.DisplayFor(model => model.CFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.CLastName)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.CEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.CPhoneNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.CCity)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.CStreet)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.CState)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.CZipCode)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.RFirsName)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.RLastName)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.RCity)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.RStreet)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.RState)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.RZipCode)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { Model.CustomerId }) |
-            @Html.ActionLink("Details", "Details", new { Model.CustomerId }) |
-            @Html.ActionLink("Delete", "Delete", new { Model.CustomerId })
-        </td>
-    </tr>
-
-
-</table>
+    </header>
+</body>
+</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

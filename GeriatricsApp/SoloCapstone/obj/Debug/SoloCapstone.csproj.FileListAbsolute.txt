@@ -332,3 +332,10 @@ C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\So
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedNullableJournalEntry.resources
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedCustomerIdToEventsTable.resources
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedLatLongToFacilities.resources
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\Twilio.dll
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\Twilio.xml
