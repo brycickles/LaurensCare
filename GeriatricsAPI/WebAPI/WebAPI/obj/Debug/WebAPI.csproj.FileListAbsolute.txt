@@ -234,3 +234,10 @@ C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\bin\Twilio.xml
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsAPI\WebAPI\WebAPI\obj\Debug\WebAPI.Migrations.FirstMigration.resources
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\bin\Twilio.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsAPI\WebAPI\WebAPI\bin\Twilio.xml

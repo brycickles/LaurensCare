@@ -328,7 +328,6 @@ C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\o
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedCustomerIdToEventsTable.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedLatLongToFacilities.resources
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache
-C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedNullableJournalEntry.resources
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedCustomerIdToEventsTable.resources
 C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.Migrations.AddedLatLongToFacilities.resources
@@ -339,3 +338,11 @@ C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\b
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\Microsoft.IdentityModel.Tokens.xml
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\BallsDeep69\Desktop\New folder\LaurensCare\GeriatricsApp\SoloCapstone\bin\Twilio.xml
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Twilio.dll
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\bin\Twilio.xml
+C:\Users\bryce\source\repos\SoloCapstone\GeriatricsApp\SoloCapstone\obj\Debug\SoloCapstone.csprojAssemblyReference.cache

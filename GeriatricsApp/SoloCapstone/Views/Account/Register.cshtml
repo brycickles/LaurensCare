@@ -16,26 +16,11 @@
     <header>
         <div class="wrapper">
             <div class="logo">
-                <img src="~/Images/LaurensCare.png" alt="pathing issue" />
-            </div>
+                <a href="/Home/Index"><img src="~/Images/LaurensCare.png" alt="pathing issue" /></a>            </div>
             <ul class="nav-area">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                @if (User.IsInRole("Customer"))
-                {
-                    <li><a>@Html.ActionLink("Leave A Review", "WriteReview", "Customers")</a></li>
-                    <li><a>@Html.ActionLink("Facilies", "FacilityReviews", "Customers")</a></li>
-                    <li><a>@Html.ActionLink("Journal Entries", "CustomerJournals", "Customers")</a></li>
-                }
-                else if (User.IsInRole("Employee"))
-                {
-                    <li><a>@Html.ActionLink("Employee Home", "Index", "Employees")</a></li>
-                    <li><a>@Html.ActionLink("Add Facility Review", "AddFacilityReview", "Employees")</a></li>
-                }
-                else
-                {
                     <li><a>@Html.ActionLink("Register", "Register", "Account")</a></li>
                     <li><a>@Html.ActionLink("Login", "Login", "Account")</a></li>
-                }
+                
             </ul>
         </div>
 
