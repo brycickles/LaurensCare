@@ -14,7 +14,7 @@
     <header>
         <div class="wrapper">
             <div class="logo">
-                <img src="~/Images/LaurensCare.png" alt="pathing issue" />
+                <a href="/Home/Index"><img src="~/Images/LaurensCare.png" alt="pathing issue" /></a>
             </div>
             <ul class="nav-area">
                 @if (User.IsInRole("Customer"))
@@ -24,28 +24,24 @@
                     <li><a>@Html.ActionLink("Facilities", "FacilityReviews", "Customers")</a></li>
                     <li><a>@Html.ActionLink("Journal Entries", "CustomerJournals", "Customers")</a></li>
                     <li><a>@Html.ActionLink("Log Out", "LogOut", "Customers")</a></li>
-
                 }
                 else if (User.IsInRole("Employee"))
                 {
                     <li><a>@Html.ActionLink("Employee Home", "Index", "Employees")</a></li>
                     <li><a>@Html.ActionLink("Add Facility Review", "AddFacilityReview", "Employees")</a></li>
                     <li><a>@Html.ActionLink("Log Out", "LogOut", "Employees")</a></li>
-
-
                 }
                 else
                 {
                     <li><a>@Html.ActionLink("Register", "Register", "Account")</a></li>
                     <li><a>@Html.ActionLink("Login", "Login", "Account")</a></li>
                 }
-            </ul>
-            
+            </ul>            
         </div>
 
         <div class="welcome-text">
             <h1>Lauren's Care</h1>
-            <a href="#">Contact Us</a>
+            <a href="/Home/Contact">Contact Us</a>
         </div>
     </header>
 </body>

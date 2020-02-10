@@ -175,6 +175,8 @@ section {
     min-width: 800px;
     border-radius: 20px 20px 20px 20px;
     overflow: hidden;
+    top: 30%;
+    transform: translate(0%,-20%);
 }
 .content-table thead tr {
     background-color: #9ab8bf;
@@ -186,6 +188,7 @@ section {
 .content-table th, 
 .content-table td {
     padding: 12px 15px;
+    min-width: 200px;
 }
 
 .content-table tbody tr {

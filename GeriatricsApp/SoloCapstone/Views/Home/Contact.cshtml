@@ -1,17 +1,57 @@
 ﻿@{
     ViewBag.Title = "Contact";
+    Layout = null;
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Laurens Care Geriatrics</title>
+    <link rel="stylesheet" href="~/Content/Style.css" />
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/Home/Index"><img src="~/Images/LaurensCare.png" alt="pathing issue" /></a>
+            </div>
+            <ul class="nav-area">
+                @if (User.IsInRole("Customer"))
+                {
+                    @*<li><a>@Html.ActionLink("About", "About", "Home")</a></li>*@
+                    <li><a>@Html.ActionLink("Leave A Review", "WriteReview", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Facilities", "FacilityReviews", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Journal Entries", "CustomerJournals", "Customers")</a></li>
+                    <li><a>@Html.ActionLink("Log Out", "LogOut", "Customers")</a></li>
+                }
+                else if (User.IsInRole("Employee"))
+                {
+                    <li><a>@Html.ActionLink("Employee Home", "Index", "Employees")</a></li>
+                    <li><a>@Html.ActionLink("Add Facility Review", "AddFacilityReview", "Employees")</a></li>
+                    <li><a>@Html.ActionLink("Log Out", "LogOut", "Employees")</a></li>
+                }
+                else
+                {
+                    <li><a>@Html.ActionLink("Register", "Register", "Account")</a></li>
+                    <li><a>@Html.ActionLink("Login", "Login", "Account")</a></li>
+                }
+            </ul>
+        </div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+        <div class="box">
+            <address>
+                <h2>Company Address</h2><br />
+                <h2>Someplace, WI 53201</h2><br />
+                <h2>P: 555.555.0100</h2>
+            </address>
+            <address>
+                <h2><strong>Support:</strong>  <a href="mailto:Support@example.com">Support@example.com</a></h2>       <br />
+                <h2><strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a></h2>
+            </address>
+        </div>
+    </header>
+</body>
+</html>
+
+
